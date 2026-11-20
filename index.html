@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Access semester-wise college assignments, notes and study materials.">
+  <title>College Study Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="College Study Hub home">
+      <span class="brand-icon">CH</span>
+      <span>College <b>Study Hub</b></span>
+    </a>
+    <span class="public-tag"><span></span> Open for Students</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR LEARNING SPACE</p>
+        <h1>Study smarter.<br><span>Stay organised.</span></h1>
+        <p class="hero-sub">Find your semester assignments, class notes and study materials in one simple place.</p>
+        <div class="hero-note"><span class="check">✓</span> No login required · Free access</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle"></div>
+        <div class="book book-back"></div>
+        <div class="book book-front"><div></div><div></div><div></div></div>
+        <div class="art-cap">✦</div>
+      </div>
+    </section>
+
+    <section class="section-heading">
+      <div>
+        <p class="eyebrow">BROWSE MATERIALS</p>
+        <h2>Select your semester</h2>
+        <p class="muted">Choose your semester to find subject-wise resources.</p>
+      </div>
+      <div class="search-wrap">
+        <span>⌕</span>
+        <input id="search" type="search" placeholder="Search semester or subject..." aria-label="Search semester or subject">
+      </div>
+    </section>
+
+    <section id="semesterGrid" class="semester-grid" aria-live="polite"></section>
+
+    <section class="help-strip">
+      <div class="help-icon">↗</div>
+      <div><b>Need a file?</b><p>Open the relevant Google Drive folder and view or download the material.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> College Study Hub</span>
+    <span>Learn · Share · Grow</span>
+  </footer>
+
+  <div class="modal-backdrop" id="modal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close" id="closeModal" aria-label="Close">×</button>
+      <p class="eyebrow" id="modalEyebrow">SEMESTER</p>
+      <h2 id="modalTitle">Subjects</h2>
+      <p class="muted">Choose a subject to open its study material.</p>
+      <div id="subjectList" class="subject-list"></div>
+    </section>
+  </div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
